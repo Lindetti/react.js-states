@@ -1,0 +1,473 @@
+$primary-color: orange;
+$text-color: white;
+$background-color: rgb(58, 58, 59);
+$content-color: rgb(143, 135, 135);
+$completed-color: rgb(123, 202, 87);
+$delete-button-color: red;
+$form-color: rgb(77, 74, 74);
+$default-padding: 1rem;
+$default-width: 390px;
+$default-margin-top: 1rem;
+$default-mragin-bottom: 1rem;
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+/* Div descriptions */
+  .desc {
+    font-size: 1.2rem;
+}
+
+  .wrapper {
+    background-color: $background-color;
+    color: $text-color;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+     .home-wrapper {
+        display: flex;
+        flex-direction: column;
+        width: $default-width;
+        gap: 1rem;
+        margin-top: $default-margin-top;
+        margin-bottom: $default-mragin-bottom;
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            font-size: 1.1rem;
+        }
+      
+        /*Todo List */
+       .myFormDiv { 
+        form {
+            background-color: $form-color;
+            color: $text-color;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5px;
+            padding: 0.5rem;
+
+            input {
+                padding: 0.5rem;
+            }
+            
+        }
+
+        .mapped-list {
+            background-color:  $content-color;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            height: 200px;
+            overflow: auto;
+        }
+
+        /*Nothing in ToDolist */
+        .noItems {
+            background-color:  $content-color;
+            color: $text-color;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            padding: $default-padding;
+        }
+        
+        .noItemsText {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .item-divs {
+            background-color: rgb(104, 101, 101);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: $default-padding;
+
+            .itemButtons {
+                display: flex;
+                gap: 1rem;
+            }
+            
+        }
+
+        /* Buttons TodoList */
+        .add {
+            padding: 0.5rem 2rem;
+            cursor: pointer;
+            background-color: $primary-color;
+            color: $text-color;
+            border: none;
+        }
+        
+        .delete {
+            padding: 0.5rem 2rem;
+            cursor: pointer;
+            background-color: $delete-button-color;
+            color: $text-color;
+            border: none;
+        }
+        
+        .complete {
+          cursor: pointer;
+          background-color: $completed-color;
+          border: none;
+          color: $text-color;
+        }
+
+    }
+        
+           /* Timer */
+          .time-wrapper {
+           background-color:  $content-color;
+           padding: $default-padding;
+           text-align: center;
+           font-size: 1.3rem;
+
+          .mounted-counter-p {
+           text-align: left;
+           margin-bottom: $default-mragin-bottom;
+    }
+}
+          /* Button - menu */
+          .buttons {
+           background-color:  $content-color;
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           gap: 1rem;
+           width: $default-width;
+           height: auto;
+           padding: $default-padding;
+
+            .activeBtn {
+            padding: $default-padding;
+            cursor: pointer;
+            border: none;
+            color: $text-color;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            border-radius: 5px;
+                }
+}
+
+         /* Calculator */
+        .calculator-wrapper {
+         background-color:  $content-color;
+         padding: $default-padding;
+
+         .calculator-content {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            margin-top: $default-margin-top;
+           
+
+                 /* Calculator Result */
+            .result-div {
+                background-color: rgb(63, 59, 59);
+                margin-bottom: 2rem;
+                width: 250px;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 2rem;
+                overflow: hidden;
+            }
+
+                /* Calculator Buttons */
+                .calc-btns {
+                    display: flex;
+                    flex-wrap: wrap;
+                   gap: 1rem;
+                   width: 250px;
+                   }
+                   
+                   .calc-btn {
+                       border: none;
+                       font-size: 1.5rem;
+                       background-color: rgb(63, 59, 59);
+                       color: white;
+                       width: 50px;
+                       height: 50px;
+                       cursor: pointer;
+                       display: flex;
+                       justify-content: center;
+                       align-items: center;
+                   }
+                   
+                   .grey-btn {
+                       background-color: rgb(105, 102, 102);
+                   }
+                   
+                   .orange-btn {
+                       background-color: $primary-color;
+                   }
+                   
+                   .biggerBtn {
+                       width: 117px;
+                       display: flex;
+                       justify-content: flex-start;
+                       padding-left: 1.2rem;
+                   }
+          
+        }
+            
+    }
+
+              /* Modal */
+              .modal-wrapper {
+                background-color:  $content-color;
+               padding: $default-padding;
+
+               .modal-button {
+                display: flex;
+             justify-content: center;
+    }
+}
+            /* Fetch */
+          .fetched-api-wrapper {
+            background-color:  $content-color;
+            padding: $default-padding;
+
+            .fetched-api-div {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: $default-margin-top;
+                gap: 0.5rem;
+                text-align: center;
+                width: auto;
+                height: auto;
+                font-size: 1rem;
+                line-height: 1.5;
+            }
+}
+
+                /* Card-flip */
+               .card-wrapper {
+                background-color:  $content-color;
+                padding: $default-padding;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+
+                .card-info {
+                    width: 100%;
+                    margin-bottom: 1rem;
+                }
+
+                .card {
+                    position: relative;
+                    height: 400px;
+                    width: 300px;
+                    transition: 0.8s ease;
+                    transform-style: preserve-3d;
+                }
+
+                .card-back, .card-front {
+                    position: absolute;
+                   width: 100%;
+                   height: 100%;
+                   backface-visibility: hidden;
+                   cursor: pointer;
+                   border-radius: 5px;
+                  display: flex;
+                   justify-content: center;
+                  align-items: center;
+                  font-size: 2rem;
+                  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+ }
+ 
+                 .card-front {
+                  background-color: $primary-color;
+                   z-index: 2;
+                   }
+ 
+                 .card-back {
+                background-color: rgb(71, 68, 68);
+                transform: rotateY(180deg);
+                 border: 1px solid $primary-color;
+   }
+ 
+              .flipped {
+               transform: rotateY(180deg);
+               }
+ 
+                 
+}
+   
+                    /* Mapped Divs */
+                  .arrayDivs {
+                  background-color:  $content-color;
+                  width: $default-width;
+                 display: flex;
+                flex-direction: column;
+                 justify-content: center;
+                  gap: 1rem;
+                 padding: $default-padding;
+
+                 .mapped-divs-wrapper{
+                    display: flex;
+                    gap: 1rem;
+
+                    .myMappedDivs-div {
+                        color: $text-color;
+                        display: flex;
+                        width: 100%;
+                        height: 80px;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: $primary-color;
+                        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                        border-radius: 5px;
+                    }
+                }
+}
+                       /*Hide and show Div */
+                       .myDiv-hide-wrapper {
+                        display: flex;
+                       flex-direction: column;
+                       background-color:  $content-color;
+                        padding: $default-padding;
+
+                        .myDiv {
+                            background-color:  $content-color;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            margin-top: $default-margin-top;
+
+                            .myHideDiv {
+                                color: $text-color;
+                                width: 100%;
+                            }
+
+                            .disappeared-div {
+                                width: 100%;
+                                height: 150px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                background-color: $primary-color;
+                                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                                border-radius: 5px;
+                            }
+                        }
+}
+
+
+                              /* Change name and text */
+                             .names {
+                              background-color:  $content-color;
+                              display: flex;
+                              flex-direction: column;
+                              gap: 1rem;
+                              padding: $default-padding;
+
+                              .changeNameDiv {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 1rem;
+                                align-items: center;
+
+                                .nameButtons {
+                                    display: flex;
+                                    gap: 1rem;
+                                }
+                                
+                             }
+}
+
+                             /* Counter */
+                             .counter-wrapper {
+                             background-color:  $content-color;
+                             padding: $default-padding;
+
+                             .counter {
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
+                                padding: $default-padding;
+                                gap: 0.5rem;
+
+                                .counterBtns {
+                                    display: flex;
+                                    gap: 1rem;
+                                    margin-top: 0.5rem;
+                                }
+                            }
+                            
+}
+
+
+                             /* Props */
+                             .props-div {
+                            background-color: $content-color;  
+                           display: flex;
+                           flex-direction: column;
+                           justify-content: center;
+                            padding: $default-padding;
+
+                            .props-component {
+                                display: flex;
+                                justify-content: center;
+                                margin-top: 0.5rem
+                            }
+                            
+}
+
+
+     }
+  }
+
+
+
+/* Other */
+.display-none {
+    display: none;
+}
+
+.display-block {
+    display: block;
+}
+
+.try-buttons {
+    background-color: orange;
+    border: none;
+    padding: 0.5rem 1rem;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.hide-btn {
+    background-color: orange;
+    border: none;
+    padding: 0.5rem 1rem;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
